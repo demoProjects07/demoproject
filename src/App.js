@@ -17,7 +17,7 @@ function UserForm() {
         }
 
         try {
-            await axios.post("http://localhost:5000/submit", formData, {
+            await axios.post("https://demo-project-backend-three.vercel.app/submit", formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
             alert("Submission Successful!");
@@ -63,7 +63,7 @@ function AdminDashboard() {
     // Fetch submissions from the backend
     const fetchSubmissions = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/submissions");
+            const response = await axios.get("https://demo-project-backend-three.vercel.app/submissions");
             setSubmissions(response.data);
         } catch (error) {
             console.error("Error fetching submissions", error);
@@ -104,12 +104,12 @@ function AdminDashboard() {
                                     {submission.images.map((image, index) => (
                                         <a
                                             key={index}
-                                            href={`http://localhost:5000/${image}`}
+                                            href={`https://demo-project-backend-three.vercel.app/${image}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
                                             <img
-                                                src={`http://localhost:5000/${image}`}
+                                                src={`https://demo-project-backend-three.vercel.app/${image}`}
                                                 alt={`Uploaded ${index + 1}`}
                                                 style={{
                                                     width: "100px",
