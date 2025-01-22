@@ -104,12 +104,12 @@ function AdminDashboard() {
                                     {submission.images.map((image, index) => (
                                         <a
                                             key={index}
-                                            href={`https://demo-project-backend-three.vercel.app/${image}`}
+                                            href={`https://demo-project-backend-three.vercel.app${image}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
                                             <img
-                                                src={`https://demo-project-backend-three.vercel.app/${image}`}
+                                                src={`https://demo-project-backend-three.vercel.app${image}`}
                                                 alt={`Uploaded ${index + 1}`}
                                                 style={{
                                                     width: "100px",
